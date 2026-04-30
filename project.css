@@ -1,0 +1,29 @@
+h1 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: #ff6b6b;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+h3 {
+    border-bottom: 1px solid red;
+}
+
+div.shop {
+    background-color: #ffe4af;
+    padding: 10px;
+    border-top: 3px solid #529dff;
+    border-bottom: 3px solid #529dff;
+    margin-top: 10px;
+}
+
+div.shop-top{
+    background-color: rgb(204, 246, 249);
+    padding: 10px;
+}
+
+.yosan {
+    border-bottom:1px solid green;
+    width: 300px;
+}
