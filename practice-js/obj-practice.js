@@ -1,4 +1,3 @@
-console.log("loaded");
 //////////////// ここは書き換えてはいけない！ 
 
 let campus = {
