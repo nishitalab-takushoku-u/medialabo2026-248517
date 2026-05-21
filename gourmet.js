@@ -15,6 +15,60 @@ function print(data) {
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+   let result = document.createElement('div');
+   result.setAttribute('id', 'result');
+    document.body.insertAdjacentElement('beforeend', result);
+
+    let h2 = document.createElement('h2');
+    h2.textContent = '八王子の居酒屋 検索結果 2件';
+    result.insertAdjacentElement('beforeend', h2);
+
+    for(let n of data.results.shop){
+      let shop = document.createElement('div');
+      shop.setAttribute('class', 'shop');
+
+      let shopTop = document.createElement('div');
+      shopTop.setAttribute('class', 'shop-top');
+
+      let h3 = document.createElement('h3');
+      h3.textContent = n.name;
+
+      let yosan = document.createElement('p');
+      yosan.setAttribute('class', 'yosan');
+      yosan.textContent = '予算: ' + n.budget.name + '/ジャンル: ' + n.genre.name;
+
+      shopTop.insertAdjacentElement('beforeend', h3);
+      shopTop.insertAdjacentElement('beforeend', yosan);
+
+
+      let shopBottom = document.createElement('div');
+      shopBottom.setAttribute('class', 'shop-bottom');
+
+      let p1 = document.createElement('p');
+      p1.textContent = 'サブジャンル: ' + n.sub_genre.name;
+
+      let p2 = document.createElement('p');
+      p2.textContent = '住所: ' + n.address;
+
+      let p3 = document.createElement('p');
+      p3.textContent = 'キャッチコピー: ' + n.catch;
+
+      let p4 = document.createElement('p');
+      p4.textContent = '営業時間: ' + n.open;
+
+      let p5 = document.createElement('p');
+      p5.textContent = 'アクセス: ' + n.access;
+
+      shopBottom.insertAdjacentElement('beforeend', p1);
+      shopBottom.insertAdjacentElement('beforeend', p2);
+      shopBottom.insertAdjacentElement('beforeend', p3);
+      shopBottom.insertAdjacentElement('beforeend', p4);
+      shopBottom.insertAdjacentElement('beforeend', p5);
+
+      shop.insertAdjacentElement('beforeend', shopTop);
+      shop.insertAdjacentElement('beforeend', shopBottom);
+      result.insertAdjacentElement('beforeend', shop);
+    }
 
 }
 
