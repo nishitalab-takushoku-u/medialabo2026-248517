@@ -15,8 +15,12 @@ function print(data) {
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
-   let result = document.createElement('div');
-   result.setAttribute('id', 'result');
+    let remove =document.querySelector('#result');
+    if(remove){
+      remove.remove();
+    }
+    let result = document.createElement('div');
+    result.setAttribute('id', 'result');
     document.body.insertAdjacentElement('beforeend', result);
 
     let h2 = document.createElement('h2');
